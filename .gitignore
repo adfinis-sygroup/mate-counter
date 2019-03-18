@@ -1,0 +1,12 @@
+# Database
+db.sqlite3
+
+# Editor
+.vscode/
+
+# Python
+*.pyc
+*.pyo
+__pycache__/
+
+node_modules/

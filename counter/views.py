@@ -12,6 +12,8 @@ from counter.models import Profile
 def home_view(request):
     return render(request, "index.html")
 
+def login_view(request):
+    return render(request, "login/login.html")
 
 class RegistrationView(FormView):
     model = User

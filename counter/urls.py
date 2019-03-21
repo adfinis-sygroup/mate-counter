@@ -11,5 +11,8 @@ urlpatterns = [
 
     url(r'^send_confirmation_mail/$',
         views.send_confirmation_mail_view,
-        name='send confirmation mail')
+        name='send confirmation mail'),
+
+    url(r'^login/$',
+        views.login_view, name="login"),
 ]

@@ -7,13 +7,20 @@ from django.core.mail import send_mail
 from django.conf import settings
 from counter.forms import RegistrationForm
 from counter.models import Profile
+from django.views import generic
 
 
 def home_view(request):
     return render(request, "index.html")
 
+
+def profile_view(request):
+    return render(request, "profile.html")
+
+
 def login_view(request):
     return render(request, "login/login.html")
+
 
 class RegistrationView(FormView):
     model = User
@@ -47,15 +54,32 @@ class RegistrationView(FormView):
             Hello,
 
             please click this link to activate your Mate Counter account:
-            {}/registration_done/{}
+            {0}/registration_done/{1}
 
             Sincerely,
             The Mate Counter Team
-            """.format(settings.SITE_URL, profile.key),
+            """.format(settings.SITE_URL, profile.key.decode("utf-8")),
             'matecounter@matecounter.com',
             [user.email],
             fail_silently=False,
         )
+
+
+class RegistrationDoneView(generic.TemplateView):
+    template_name = 'registration/registration_done.html'
+
+    def get_context_data(request, key):
+        matches = Profile.objects.filter(key=key)
+        if matches.exists():
+            profile = matches.first()
+            if profile.user.is_active:
+                request.template_name = (
+                    'osschallenge/user_is_already_active.html')
+            else:
+                profile.user.is_active = True
+                profile.user.save()
+        else:
+            request.template_name = 'osschallenge/registration_failed.html'
 
 
 def send_confirmation_mail_view(request):

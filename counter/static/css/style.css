@@ -1,52 +1,54 @@
-body{
-background:
-       linear-gradient(
-         rgba(0, 0, 0, 0.7),
-         rgba(0, 0, 0, 0.7)
-       ),
-       /* bottom, image */
-       url(http://getwallpapers.com/wallpaper/full/c/b/0/23460.jpg) no-repeat fixed;
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    /* bottom, image */
+      url(http://getwallpapers.com/wallpaper/full/c/b/0/23460.jpg) no-repeat
+      fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
 
-.paragraph1{
+.paragraph1 {
   bottom: 0;
 }
 
-.titletext{
+.titletext {
   text-align: center;
-  font-family: 'Monda', sans-serif;
+  font-family: "Monda", sans-serif;
 }
 
-.particles-js-canvas-el {pointer-events: none;}{
+.particles-js-canvas-el {
+  pointer-events: none;
+}
+ {
 }
 
-.particles-js-canvas-el{
+.particles-js-canvas-el {
   position: absolute;
   display: inline;
 }
-.buttondiv{
+.buttondiv {
   text-align: center;
 }
 
-.buttons{
+.buttons {
   background-color: rgba(39, 88, 209, 0.18);
   color: lightgrey;
-  border: 2px solid #2F8CE9;
-  font-family: 'Monda', sans-serif;
+  border: 2px solid #2f8ce9;
+  font-family: "Monda", sans-serif;
   border-radius: 7px;
   height: 90%;
   font-size: 340%;
+  text-decoration: none;
 }
 
 .buttons:hover {
   background-color: rgba(39, 88, 209, 0.5);
+  text-decoration: none;
 }
 
-#Title{
+#Title {
   color: lightgrey;
   font-size: 350%;
 }

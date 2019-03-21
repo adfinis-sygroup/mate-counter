@@ -1,6 +1,5 @@
 body{
 background:
-
        linear-gradient(
          rgba(0, 0, 0, 0.7),
          rgba(0, 0, 0, 0.7)
@@ -11,43 +10,29 @@ background:
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-
-   }
-
-
-.paragraph1{
-
-  bottom: 0;
-
 }
 
+.paragraph1{
+  bottom: 0;
+}
 
 .titletext{
-
-
   text-align: center;
   font-family: 'Monda', sans-serif;
 }
 
 .particles-js-canvas-el {pointer-events: none;}{
-
-
 }
 
 .particles-js-canvas-el{
-
   position: absolute;
   display: inline;
 }
 .buttondiv{
   text-align: center;
-
-
 }
 
-
 .buttons{
-
   background-color: rgba(39, 88, 209, 0.18);
   color: lightgrey;
   border: 2px solid #2F8CE9;
@@ -55,17 +40,13 @@ background:
   border-radius: 7px;
   height: 90%;
   font-size: 340%;
-
 }
 
 .buttons:hover {
   background-color: rgba(39, 88, 209, 0.5);
-
 }
 
 #Title{
   color: lightgrey;
   font-size: 350%;
-
-
 }

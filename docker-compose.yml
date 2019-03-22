@@ -25,4 +25,16 @@ services:
     ports:
       - "1080:1080"
       - "1025:1025"
-   
+  mate_counter:
+    image: mate_counter
+    environment:
+      - DJANGO_DATABASE_NAME=mate_counter
+      - DJANGO_DATABASE_USER=matecounter
+      - DJANGO_DATABASE_PASSWORD=matecounter
+      - DJANGO_DATABASE_HOST=postgres
+      - DJANGO_DATABASE_PORT=5432
+
+    depends_on:
+      - postgres
+    ports:
+      - "8000:8000"

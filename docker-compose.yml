@@ -25,4 +25,7 @@ services:
     ports:
       - "1080:1080"
       - "1025:1025"
-   
+  mate_counter:
+    image: mate_counter
+    ports:
+      - "8000:8000"

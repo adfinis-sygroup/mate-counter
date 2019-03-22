@@ -26,7 +26,7 @@ services:
       - "1080:1080"
       - "1025:1025"
   mate_counter:
-    image: mate_counter
+    image: nyno/mate_counter
     environment:
       - DJANGO_DATABASE_NAME=mate_counter
       - DJANGO_DATABASE_USER=matecounter

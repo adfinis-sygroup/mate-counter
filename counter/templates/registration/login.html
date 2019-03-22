@@ -9,19 +9,19 @@
 
 
 <body>
-<div class="page-content">
+  <div class="page-content">
 
 
-  <h1 class="titletext">
-      <p id="Title"> Mate Counter </p>
-  </h1>
+    <h1 class="titletext">
+        <p id="Title"> Mate Counter </p>
+    </h1>
 
 
-  <form method="POST">
-    {% csrf_token %}
+    <form method="POST">
+      {% csrf_token %}
 
-    <div class="login">
-    <div class="form-group-login">
+      <div class="login">
+      <div class="form-group-login">
 
       <input
         type="text"
@@ -31,31 +31,31 @@
         placeholder="Username"
         autofocus
       />
-    </div>
-    <div class="form-group-login">
-
-      <input
-        type="password"
-        id="id_password"
-        name="password"
-        class="form-control"
-        placeholder="Password"
-      />
-    </div>
-    {% if form.non_field_errors %}
-    <ul class="form-errors">
-      {% for error in form.non_field_errors %}
-      <div class="alert alert-danger" role="alert">{{ error }}</div>
-      {% endfor %}
-    </ul>
-    {% endif %}
-    <div class="form-group-login">
-      <button type="submit" id="login" class="btn btn-primary">Login</button>
-    </div>
-    <div class="form-group">
-      <a id="forgotpass" href="/password_reset/">Forgot password?</a>
       </div>
-    </div>
-  </form>
-</div>
-<body>
+      <div class="form-group-login">
+
+        <input
+          type="password"
+          id="id_password"
+          name="password"
+          class="form-control"
+          placeholder="Password"
+        />
+      </div>
+      {% if form.non_field_errors %}
+      <ul class="form-errors">
+        {% for error in form.non_field_errors %}
+        <div class="alert alert-danger" role="alert">{{ error }}</div>
+        {% endfor %}
+      </ul>
+      {% endif %}
+      <div class="form-group-login">
+        <button type="submit" id="login" class="btn btn-primary">Login</button>
+      </div>
+      <div class="form-group">
+        <a id="forgotpass" href="/password_reset/">Forgot password?</a>
+        </div>
+      </div>
+    </form>
+  </div>
+</body>

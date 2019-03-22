@@ -8,7 +8,6 @@ from django.conf import settings
 from counter.forms import RegistrationForm
 from counter.models import Profile
 from django.views import generic
-from django.contrib.auth.decorators import login_required
 
 
 def home_view(request):

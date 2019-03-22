@@ -11,6 +11,10 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
+import environ
+
+env = environ.Env()
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -23,9 +27,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'hzdd)+p28kdqjasnon+sh(&fr#u#5j)#!x1g7&y+h-4z-_*)4n'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+#DEBUG = FALSE
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -80,17 +84,17 @@ WSGI_APPLICATION = 'mate_counter.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'mate_counter',
-        'USER': 'matecounter',
-        'PASSWORD': 'matecounter',
-        'HOST': '127.0.0.1',
-        'PORT': '5432'
+    "default": {
+        "ENGINE": "django.db.backends.postgresql_psycopg2",
+        "NAME": env.str("DJANGO_DATABASE_NAME", default="mate_counter"),
+        "USER": env.str("DJANGO_DATABASE_USER", default="matecounter"),
+        "PASSWORD": env.str("DJANGO_DATABASE_PASSWORD", default="matecounter"),
+        "HOST": env.str("DJANGO_DATABASE_HOST", default="localhost"),
+        "PORT": env.str("DJANGO_DATABASE_PORT", default="5432")
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators

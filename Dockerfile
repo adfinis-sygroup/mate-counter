@@ -1,33 +1,18 @@
-FROM debian:9.7
-RUN apt-get update
-RUN apt-get install python3 curl wget python3-pip git bzip2 readline-common sqlite3 -y
-RUN apt-get update && apt-get install -y python python-dev python3 python3-dev python3-pip virtualenv libssl-dev libpq-dev git build-essential libfontconfig1 libfontconfig1-dev
-RUN pip3 install setuptools pip --upgrade --force-reinstall
-RUN curl https://pyenv.run -o install-pyenv.sh
-RUN bash install-pyenv.sh
-RUN git clone https://github.com/pyenv/pyenv-virtualenv.git $(pyenv root)/plugins/pyenv-virtualenv
-RUN chmod +x /root/.pyenv/bin
-RUN eval "$(pyenv virtualenv-init -)"
-RUN export PATH="/root/.pyenv/bin:$PATH"
-RUN eval "$(pyenv init -)"
+FROM python:3.6.8
 
+RUN pip install setuptools pip --upgrade --force-reinstall
+ENV TARGET_DIR /opt/mate_counter
+RUN mkdir ${TARGET_DIR}
 
-RUN /root/.pyenv/bin/pyenv install 3.6.8
-RUN /root/.pyenv/bin/pyenv virtualenv 3.6.8 mate_counter
-RUN virtualenv /venv/testenv/ -p which python3.6.8
+COPY counter ${TARGET_DIR}/counter
+COPY manage.py ${TARGET_DIR}/manage.py
+COPY mate_counter ${TARGET_DIR}/mate_counter
+COPY .python-version ${TARGET_DIR}/.python-version
+COPY requirements.txt ${TARGET_DIR}/requirements.txt
+COPY wait-for-it.sh ${TARGET_DIR}/wait-for-it.sh
 
-ENV target_dir /opt/mate_counter
-RUN mkdir ${target_dir}
-
-COPY counter ${target_dir}/counter
-COPY manage.py ${target_dir}/manage.py
-COPY mate_counter ${target_dir}/mate_counter
-COPY .python-version ${target_dir}/.python-version
-COPY requirements.txt ${target_dir}/requirements.txt
-COPY start.sh /start.sh
-
-RUN pip3 install -r ${target_dir}/requirements.txt
-
-CMD ["./start.sh"]
+RUN pip install -r ${TARGET_DIR}/requirements.txt
+WORKDIR $TARGET_DIR
 
 EXPOSE 8000:8000
+CMD /bin/sh -c "./wait-for-it.sh $DJANGO_DATABASE_HOST:$DJANGO_DATABASE_PORT -- ./manage.py makemigrations; ./manage.py migrate ; ./manage.py runserver"

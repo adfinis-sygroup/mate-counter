@@ -4,7 +4,14 @@ from django.contrib.auth.forms import AuthenticationForm
 
 
 class LoginForm(AuthenticationForm):
-    username = forms.CharField(label='Username')
+    username = forms.CharField(
+        label='',
+        widget=forms.TextInput(attrs={'placeholder': 'Username'})
+    )
+    password = forms.CharField(
+        label='',
+        widget=forms.PasswordInput(attrs={'placeholder': 'Password'}),
+    )
 
 
 class RegistrationForm(forms.Form):

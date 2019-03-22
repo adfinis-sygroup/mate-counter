@@ -73,10 +73,13 @@ body {
 
 .login {
   text-align: center;
+  margin-top: 50px;
 }
 
 .form-group-login {
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 input[type="text"] {
@@ -117,8 +120,6 @@ input[type="password"] {
 .particles-js-canvas-el {
   position: fixed;
   display: inline;
-  height: 100%;
-  width: 100%;
 }
 
 

@@ -23,6 +23,46 @@ body {
   border-radius: 7px;
   font-size: 340%;
   text-decoration: none;
+  margin-bottom: 20px;
+}
+
+
+
+.btn-primary:hover {
+  background-color: rgba(39, 88, 209, 0.4);
+
+
+}
+
+#logout{
+
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  border-color: #2f8ce9;
+  border: 2px solid;
+  border-radius: 10px;
+  font-size: 110%;
+
+}
+
+.btn-secondary {
+  background-color: rgba(39, 88, 209, 0.18);
+  color: lightgrey;
+  border: 2px solid #2f8ce9;
+  font-family: "Monda", sans-serif;
+  border-radius: 7px;
+  font-size: 110%;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+
+.btn-secondary:hover {
+  background-color: rgba(39, 88, 209, 0.4);
+
+  border: 2px solid #2f8ce9;
+
 }
 
 #forgotpass {
@@ -68,14 +108,19 @@ input[type="password"] {
 
 .particles-js-canvas-el {
   pointer-events: none;
+  position: absolute;
 }
 
+
+
+
 .particles-js-canvas-el {
-  position: absolute;
+  position: fixed;
   display: inline;
   height: 100%;
   width: 100%;
 }
+
 
 .buttondiv {
   display: flex;
@@ -93,10 +138,46 @@ input[type="password"] {
   right: 50%;
 }
 
-.number {
-  display: flex;
-  justify-content: center;
+.title2{
+  margin-bottom: 190px;
+  margin-top: 0;
+
 }
+
+.number {
+
+ text-align: center;
+
+
+}
+
+
+.textbox{
+
+  border: 2px solid #2f8ce9;
+  border-radius: 4px;
+  background-color: rgba(39, 88, 209, 0.5);
+  color: white;
+  font-size: 140%;
+  align-self: center;
+  margin-bottom: 10px;
+
+
+}
+
+
+
+#backbutton{
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  border-radius: 10px;
+  background-color: #2f8ce9;
+  border-color: #2d399b;
+  font-size: 120%;
+
+}
+
 
 .buttons {
   background-color: rgba(39, 88, 209, 0.18);
@@ -109,8 +190,26 @@ input[type="password"] {
   text-decoration: none;
   width: 20%;
   align-self: center;
-  margin-top: 20px;
+  margin-bottom: 20px;
+
 }
+
+
+.buttons2 {
+  background-color: rgba(39, 88, 209, 0.18);
+  color: lightgrey;
+  border: 2px solid #2f8ce9;
+  font-family: "Monda", sans-serif;
+  border-radius: 7px;
+  height: 90%;
+  font-size: 120%;
+  text-decoration: none;
+  width: 20%;
+  align-self: center;
+
+}
+
+html,body { height:100%; }
 
 .buttons:hover {
   background-color: rgba(39, 88, 209, 0.5);

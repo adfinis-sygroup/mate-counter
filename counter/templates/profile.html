@@ -1,7 +1,7 @@
 {% load staticfiles %}
 
 <!DOCTYPE html>
-<html lang="de"h-open/osschallenge>
+<html>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, intial-scale=1.0" />
@@ -23,9 +23,7 @@
       <p>Total debts: {{ total }} CHF</p>
     </h1>
     <div class="Bottles">
-      <img src="https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Falterdrinks.co.uk%2Fimage%2Fcache%2Fdata%2Fclub_mate_33-270x270.png" alt="Bottle 1" id="Bottle1">
-      <img src="https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Falterdrinks.co.uk%2Fimage%2Fcache%2Fdata%2Fclub_mate_33-270x270.png" alt="Bottle 1" id="Bottle2">
-    </div>
+        </div>
     <div class="number">
       <form method="post">
         {% csrf_token %}
@@ -33,20 +31,26 @@
           type="number"
           step="any"
           name="number"
+          class="textbox"
           placeholder="number"
           autofocus
         />
-        <input type="submit" name="submit" value="Submit" />
+        <br>
+        <input type="submit" name="submit" class="btn-primary" value="Submit" />
       </form>
+
       <form method="post">
         {% csrf_token %}
-        <input type="submit" name="clear all" value="Clear all debts" />
+        <input type="submit" class="btn-secondary" name="clear all" value="Clear all debts" />
       </form>
-        <a type="button" href="/logout">Logout</a>
-        <a href="/password_change" class="btn-primary">Reset Password</a>
+
+        <a type="button" id="logout" href="/logout">Logout</a>
+
+        <a type="button" class="buttons2"  href="/password_change">Reset Password</a>
+
       </form>
     </div>
-    <br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br>
+
+
   </body>
 </html>

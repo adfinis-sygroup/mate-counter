@@ -1,16 +1,47 @@
 from django import forms
 from django.contrib.auth.models import User
+from django.contrib.auth.forms import AuthenticationForm
+
+
+class LoginForm(AuthenticationForm):
+    username = forms.CharField(
+        label='',
+        widget=forms.TextInput(attrs={'placeholder': 'Username'})
+    )
+    password = forms.CharField(
+        label='',
+        widget=forms.PasswordInput(attrs={'placeholder': 'Password'}),
+    )
 
 
 class RegistrationForm(forms.Form):
-    username = forms.CharField(label=('Username'), max_length=30)
-    first_name = forms.CharField(label=('First name'), max_length=30)
-    last_name = forms.CharField(label=('Last name'), max_length=30)
-    email = forms.EmailField(label='Email')
-    password1 = forms.CharField(label=('Password'),
-                                widget=forms.PasswordInput())
-    password2 = forms.CharField(label=('Password (Again)'),
-                                widget=forms.PasswordInput())
+    username = forms.CharField(
+        max_length=30,
+        label='',
+        widget=forms.TextInput(attrs={'placeholder': 'Username'})
+    )
+    first_name = forms.CharField(
+        max_length=30,
+        label='',
+        widget=forms.TextInput(attrs={'placeholder': 'First name'})
+    )
+    last_name = forms.CharField(
+        max_length=30,
+        label='',
+        widget=forms.TextInput(attrs={'placeholder': 'Last name'})
+    )
+    email = forms.EmailField(
+        widget=forms.TextInput(attrs={'placeholder': 'Email'}),
+        label=''
+    )
+    password1 = forms.CharField(
+        widget=forms.PasswordInput(attrs={'placeholder': 'Password'}),
+        label=''
+    )
+    password2 = forms.CharField(
+        widget=forms.PasswordInput(attrs={'placeholder': 'Password again'}),
+        label=''
+    )
 
     def clean_password2(self):
         if 'password1' in self.cleaned_data:

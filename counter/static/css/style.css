@@ -1,0 +1,209 @@
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    /* bottom, image */
+      url(http://getwallpapers.com/wallpaper/full/c/b/0/23460.jpg) no-repeat
+      fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.paragraph1 {
+  bottom: 0;
+}
+
+.btn-primary {
+  background-color: rgba(39, 88, 209, 0.18);
+  color: lightgrey;
+  border: 2px solid #2f8ce9;
+  font-family: "Monda", sans-serif;
+  border-radius: 7px;
+  font-size: 340%;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.btn-primary:hover {
+  background-color: rgba(39, 88, 209, 0.4);
+}
+
+#logout {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  border-color: #2f8ce9;
+  border: 2px solid;
+  border-radius: 10px;
+  font-size: 110%;
+}
+
+.btn-secondary {
+  background-color: rgba(39, 88, 209, 0.18);
+  color: lightgrey;
+  border: 2px solid #2f8ce9;
+  font-family: "Monda", sans-serif;
+  border-radius: 7px;
+  font-size: 110%;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(39, 88, 209, 0.4);
+
+  border: 2px solid #2f8ce9;
+}
+
+#forgotpass {
+  color: white;
+  font-family: "Monda", sans-serif;
+  font-style: none;
+}
+
+.login {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.form-group-login {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="text"] {
+  border: 2px solid #2f8ce9;
+  border-radius: 4px;
+  background-color: rgba(39, 88, 209, 0.5);
+  color: white;
+  font-size: 140%;
+  align-self: center;
+  width: 20%;
+  margin-top: 10px;
+}
+
+input[type="password"] {
+  border: 2px solid #2f8ce9;
+  border-radius: 4px;
+  background-color: rgba(39, 88, 209, 0.5);
+  color: white;
+  font-size: 140%;
+  align-self: center;
+  width: 20%;
+  margin-top: 10px;
+}
+
+.titletext {
+  text-align: center;
+  font-family: "Monda", sans-serif;
+}
+
+.particles-js-canvas-el {
+  pointer-events: none;
+  position: absolute;
+}
+
+.particles-js-canvas-el {
+  position: fixed;
+  display: inline;
+}
+
+.buttondiv {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+#Bottle1 {
+  position: fixed;
+  right: 35%;
+}
+
+#Bottle2 {
+  position: fixed;
+  right: 50%;
+}
+
+.title2 {
+  margin-bottom: 100px;
+  margin-top: 0;
+}
+
+.number {
+  text-align: center;
+}
+
+.textbox {
+  border: 2px solid #2f8ce9;
+  border-radius: 4px;
+  background-color: rgba(39, 88, 209, 0.5);
+  color: white;
+  font-size: 140%;
+  align-self: center;
+  margin-bottom: 10px;
+}
+
+#backbutton {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  border-radius: 10px;
+  background-color: #2f8ce9;
+  border-color: #2d399b;
+  font-size: 120%;
+}
+
+.buttons {
+  background-color: rgba(39, 88, 209, 0.18);
+  color: lightgrey;
+  border: 2px solid #2f8ce9;
+  font-family: "Monda", sans-serif;
+  border-radius: 7px;
+  height: 90%;
+  font-size: 340%;
+  text-decoration: none;
+  width: 20%;
+  align-self: center;
+  margin-bottom: 20px;
+}
+
+.buttons2 {
+  background-color: rgba(39, 88, 209, 0.18);
+  color: lightgrey;
+  border: 2px solid #2f8ce9;
+  font-family: "Monda", sans-serif;
+  border-radius: 7px;
+  height: 90%;
+  font-size: 120%;
+  text-decoration: none;
+  width: 20%;
+  align-self: center;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.buttons:hover {
+  background-color: rgba(39, 88, 209, 0.5);
+  text-decoration: none;
+}
+
+#Title {
+  color: lightgrey;
+  font-size: 350%;
+}
+
+#SubTitle {
+  color: lightgrey;
+  font-size: 150%;
+}
+
+.form-errors {
+  color: white;
+  font-family: "Monda", sans-serif;
+}

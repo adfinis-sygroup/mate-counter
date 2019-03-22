@@ -1,0 +1,37 @@
+{% load staticfiles %}
+
+<html>
+  {% include 'head.html' %}
+  <body id="particles-js">
+    {% include 'particlejs.html' %}
+    <h1 class="titletext">
+      <p id="Title"> Mate Counter </p>
+      <p id="SubTitle">Username: {{ current_user }}</p>
+      <p>Total debts: {{ total }} CHF</p>
+    </h1>
+    <div class="Bottles">
+        </div>
+    <div class="number">
+      <form method="post">
+        {% csrf_token %}
+        <input
+          type="number"
+          step="any"
+          name="number"
+          class="textbox"
+          placeholder="number"
+          autofocus
+        />
+        <br>
+        <input type="submit" name="submit" class="btn-primary" value="Submit" />
+      </form>
+      <form method="post">
+        {% csrf_token %}
+        <input type="submit" class="btn-secondary" name="clear all" value="Clear all debts" />
+      </form>
+        <a type="button" id="logout" href="/logout">Logout</a>
+        <a type="button" class="buttons2"  href="/password_change">Reset Password</a>
+      </form>
+    </div>
+  </body>
+</html>

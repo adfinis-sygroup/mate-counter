@@ -138,6 +138,8 @@ STATIC_ROOL = os.path.join(BASE_DIR, "static")
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "counter/static/")]
 
+LOGIN_REDIRECT_URL = '/profile/'
+
 # Mailserver login settings
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'

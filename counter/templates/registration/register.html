@@ -1,8 +1,31 @@
-<div class="uk-container-small">
-  <h1>Registration</h1>
-  <form action="/register/" method="post">
-    {% csrf_token %}
-    {{ form }}
-    <input type="submit" class="btn btn-primary" value="Register" />
-  </form>
-</div>
+{% load staticfiles %}
+
+<html>
+  {% include 'head.html' %}
+  <body id="particles-js">
+    {% include 'particlejs.html' %}
+    <br /><br />
+    <div class="title2">
+      <h1 class="titletext">
+        <p id="Title">Registration</p>
+      </h1>
+    </div>
+    <div class="uk-container-sm">
+      <form action="/register/" method="post">
+        <div class="buttondiv">
+          {% csrf_token %}
+          {{ form }}
+          <input type="submit" class="buttons" value="Register" />
+        </div>
+      </form>
+    </div>
+    <form>
+      <input
+        id="backbutton"
+        type="button"
+        value="Back"
+        onclick="history.go(-1)"
+      />
+    </form>
+  </body>
+</html>

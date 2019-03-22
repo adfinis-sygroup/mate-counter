@@ -1,0 +1,36 @@
+{% load staticfiles %}
+<html>
+  {% include 'head.html' %}
+  <body id="particles-js">
+    {% include 'particlejs.html' %}
+    <div class="page-content">
+      <h1 class="titletext">
+        <p id="Title">Mate Counter</p>
+      </h1>
+      <form method="POST">
+        {% csrf_token %}
+        <div class="login">
+          <div class="form-group-login">
+            {{ form }}
+          </div>
+          <div>
+            <button type="submit" id="login" class="btn btn-primary">
+              Login
+            </button>
+          </div>
+          <div class="form-group">
+            <a id="forgotpass" href="/password_reset/">Forgot password?</a>
+          </div>
+        </div>
+        <form>
+          <input
+            id="backbutton"
+            type="button"
+            value="Back"
+            onclick="history.go(-1)"
+          />
+        </form>
+      </form>
+    </div>
+  </body>
+</html>

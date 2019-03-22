@@ -15,6 +15,21 @@ body {
   bottom: 0;
 }
 
+
+#id_email{
+
+  border: 2px solid #2f8ce9;
+  border-radius: 4px;
+  background-color: rgba(39, 88, 209, 0.5);
+  color: white;
+  font-size: 140%;
+  align-self: center;
+  width: 20%;
+  margin-top: 10px;
+
+}
+
+
 .btn-primary {
   background-color: rgba(39, 88, 209, 0.18);
   color: lightgrey;
@@ -117,6 +132,30 @@ input[type="password"] {
   font-family: "Monda", sans-serif;
 }
 
+ul {
+  text-align: center;
+  color: grey;
+  font-size: 70%;
+
+}
+
+
+
+.normaltext2{
+  text-align: center;
+  color: white;
+  font-size: 150%;
+  top: 230px;
+  position: relative;
+  font-family: "Monda", sans-serif;
+}
+
+.listed{
+
+
+
+}
+
 p {
 margin-top: 0 !important;
 }
@@ -215,6 +254,10 @@ body {
 .buttons:hover {
   background-color: rgba(39, 88, 209, 0.5);
   text-decoration: none;
+}
+
+#resetbutton {
+  width: 24%;
 }
 
 #Title {

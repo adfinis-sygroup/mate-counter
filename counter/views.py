@@ -8,18 +8,36 @@ from django.conf import settings
 from counter.forms import RegistrationForm
 from counter.models import Profile
 from django.views import generic
+from django.contrib.auth.decorators import login_required
 
 
 def home_view(request):
     return render(request, "index.html")
 
 
+# @login_required
 def profile_view(request):
-    return render(request, "profile.html")
 
+    try:
+        current_user = request.user
+        profile = Profile.objects.get(user_id=current_user.id)
+    except (Profile.DoesNotExist, User.DoesNotExist):
+        return render(request, 'no-profile-available.html')
 
-def login_view(request):
-    return render(request, "login/login.html")
+    total = profile.total
+    if request.method == 'POST' and request.POST.get('number'):
+        total = float(request.POST.get('number')) * float(2)
+        Profile.objects.filter(id=profile.id).update(total=total)
+
+    if 'clear all' in request.POST:
+        total = 0
+        Profile.objects.filter(id=profile.id).update(total=0)
+
+    return render(request,
+                  "profile.html", {
+                      'current_user': current_user.username,
+                      'total': total
+                  })
 
 
 class RegistrationView(FormView):

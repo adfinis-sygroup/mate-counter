@@ -15,4 +15,4 @@ RUN pip install -r ${TARGET_DIR}/requirements.txt
 WORKDIR $TARGET_DIR
 
 EXPOSE 8000:8000
-CMD /bin/sh -c "./wait-for-it.sh $DJANGO_DATABASE_HOST:$DJANGO_DATABASE_PORT -- ./manage.py makemigrations; ./manage.py migrate ; ./manage.py runserver"
+CMD /bin/sh -c "./wait-for-it.sh $DJANGO_DATABASE_HOST:$DJANGO_DATABASE_PORT -- ./manage.py migrate && ./manage.py runserver 0.0.0.0:8000"

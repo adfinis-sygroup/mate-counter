@@ -23,7 +23,7 @@ body {
   border-radius: 7px;
   font-size: 340%;
   text-decoration: none;
-  margin-bottom: 20px;
+
 }
 
 .btn-primary:hover {
@@ -40,6 +40,19 @@ body {
   font-size: 110%;
 }
 
+
+.submitbutton{
+
+  background-color: rgba(39, 88, 209, 0.18);
+  color: lightgrey;
+  border: 2px solid #2f8ce9;
+  font-family: "Monda", sans-serif;
+  border-radius: 7px;
+  font-size: 280%;
+  text-decoration: none;
+
+}
+
 .btn-secondary {
   background-color: rgba(39, 88, 209, 0.18);
   color: lightgrey;
@@ -48,7 +61,7 @@ body {
   border-radius: 7px;
   font-size: 110%;
   text-decoration: none;
-  margin-bottom: 20px;
+
 }
 
 .btn-secondary:hover {
@@ -99,6 +112,28 @@ input[type="password"] {
 .titletext {
   text-align: center;
   font-family: "Monda", sans-serif;
+}
+
+.normaltext{
+  text-align: center;
+  color: white;
+  font-size: 150%;
+  top: 400px;
+  position: relative;
+  font-family: "Monda", sans-serif;
+
+}
+
+p {
+
+margin-top: 0 !important;
+
+}
+
+#registerbutton{
+
+  margin-top: 10px;
+
 }
 
 .particles-js-canvas-el {

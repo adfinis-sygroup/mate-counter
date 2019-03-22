@@ -20,17 +20,18 @@
           name="number"
           class="textbox"
           placeholder="number"
+          min="1"
           autofocus
         />
         <br>
-        <input type="submit" name="submit" class="btn-primary" value="Submit" />
+        <input type="submit" name="submit" class="submitbutton" value="Submit" />
       </form>
       <form method="post">
         {% csrf_token %}
         <input type="submit" class="btn-secondary" name="clear all" value="Clear all debts" />
       </form>
         <a type="button" id="logout" href="/logout">Logout</a>
-        <a type="button" class="buttons2"  href="/password_change">Reset Password</a>
+        <a type="button" class="btn-secondary"  href="/password_change">Reset Password</a>
       </form>
     </div>
   </body>

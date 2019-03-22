@@ -15,61 +15,59 @@ body {
   bottom: 0;
 }
 
-.btn-primary{
+.btn-primary {
   background-color: rgba(39, 88, 209, 0.18);
   color: lightgrey;
   border: 2px solid #2f8ce9;
   font-family: "Monda", sans-serif;
   border-radius: 7px;
-  height: 8%;
   font-size: 340%;
   text-decoration: none;
 }
 
-#forgotpass{
- color: white;
- font-family: "Monda", sans-serif;
- font-style: none;
-
-
+#forgotpass {
+  color: white;
+  font-family: "Monda", sans-serif;
+  font-style: none;
 }
 
-
-.login{
-
+.login {
   text-align: center;
 }
 
-.form-group-login{
+.form-group-login {
   margin-bottom: 20px;
-
 }
 
-input[type=text]{
-  border: 2px solid #2F8CE9;
+input[type="text"] {
+  border: 2px solid #2f8ce9;
   border-radius: 4px;
   background-color: rgba(39, 88, 209, 0.5);
   color: white;
   font-size: 140%;
+  align-self: center;
+  width: 20%;
+  margin-top: 10px;
 }
 
-input[type=password]{
-  border: 2px solid #2F8CE9;
+input[type="password"] {
+  border: 2px solid #2f8ce9;
   border-radius: 4px;
   background-color: rgba(39, 88, 209, 0.5);
   color: white;
   font-size: 140%;
+  align-self: center;
+  width: 20%;
+  margin-top: 10px;
 }
 
-.titletext{
+.titletext {
   text-align: center;
   font-family: "Monda", sans-serif;
 }
 
-.particles-js-canvas-el{
+.particles-js-canvas-el {
   pointer-events: none;
-}
- {
 }
 
 .particles-js-canvas-el {
@@ -78,26 +76,29 @@ input[type=password]{
   height: 100%;
   width: 100%;
 }
+
 .buttondiv {
+  display: flex;
+  flex-direction: column;
   text-align: center;
 }
 
-
-#Bottle1{
+#Bottle1 {
   position: fixed;
   right: 35%;
-
-
 }
 
-#Bottle2{
+#Bottle2 {
   position: fixed;
   right: 50%;
-
-
 }
 
-.buttons{
+.number {
+  display: flex;
+  justify-content: center;
+}
+
+.buttons {
   background-color: rgba(39, 88, 209, 0.18);
   color: lightgrey;
   border: 2px solid #2f8ce9;
@@ -106,6 +107,9 @@ input[type=password]{
   height: 90%;
   font-size: 340%;
   text-decoration: none;
+  width: 20%;
+  align-self: center;
+  margin-top: 20px;
 }
 
 .buttons:hover {
@@ -118,7 +122,12 @@ input[type=password]{
   font-size: 350%;
 }
 
-#SubTitle{
+#SubTitle {
   color: lightgrey;
   font-size: 150%;
+}
+
+.form-errors {
+  color: white;
+  font-family: "Monda", sans-serif;
 }
